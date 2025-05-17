@@ -1,0 +1,81 @@
+from sqlalchemy import Column, String, Integer, DateTime, Float, Boolean
+from database import Base
+
+class FlightOffer(Base):
+    __tablename__ = "flight_offers"
+
+    search_id = Column(String, primary_key=True, index=True)
+    search_datetime = Column(DateTime)
+    search_type = Column(String)  # OW or RT
+    search_query = Column(String)
+    is_booked = Column(Boolean)
+    total_amount = Column(Float)
+    routes = Column(String)
+
+    # Leg 0 Segments
+    leg_0_segment_0_flight_number = Column(String)
+    leg_0_segment_0_airline = Column(String)
+    leg_0_segment_0_from_city_code = Column(String)
+    leg_0_segment_0_from_airport_code = Column(String)
+    leg_0_segment_0_arrival_datetime = Column(DateTime)
+    leg_0_segment_0_to_city_code = Column(String)
+    leg_0_segment_0_to_airport_code = Column(String)
+    leg_0_segment_0_departure_datetime = Column(DateTime)
+    leg_0_segment_0_baggage_value = Column(Integer)
+    leg_0_segment_0_baggage_unit = Column(String)
+
+    leg_0_segment_1_flight_number = Column(String)
+    leg_0_segment_1_airline = Column(String)
+    leg_0_segment_1_from_city_code = Column(String)
+    leg_0_segment_1_from_airport_code = Column(String)
+    leg_0_segment_1_arrival_datetime = Column(DateTime)
+    leg_0_segment_1_to_city_code = Column(String)
+    leg_0_segment_1_to_airport_code = Column(String)
+    leg_0_segment_1_departure_datetime = Column(DateTime)
+    leg_0_segment_1_baggage_value = Column(Integer)
+    leg_0_segment_1_baggage_unit = Column(String)
+
+    leg_0_segment_2_flight_number = Column(String)
+    leg_0_segment_2_airline = Column(String)
+    leg_0_segment_2_from_city_code = Column(String)
+    leg_0_segment_2_from_airport_code = Column(String)
+    leg_0_segment_2_arrival_datetime = Column(DateTime)
+    leg_0_segment_2_to_city_code = Column(String)
+    leg_0_segment_2_to_airport_code = Column(String)
+    leg_0_segment_2_departure_datetime = Column(DateTime)
+    leg_0_segment_2_baggage_value = Column(Integer)
+    leg_0_segment_2_baggage_unit = Column(String)
+
+    # Leg 1 Segments
+    leg_1_segment_0_flight_number = Column(String)
+    leg_1_segment_0_airline = Column(String)
+    leg_1_segment_0_from_city_code = Column(String)
+    leg_1_segment_0_from_airport_code = Column(String)
+    leg_1_segment_0_arrival_datetime = Column(DateTime)
+    leg_1_segment_0_to_city_code = Column(String)
+    leg_1_segment_0_to_airport_code = Column(String)
+    leg_1_segment_0_departure_datetime = Column(DateTime)
+    leg_1_segment_0_baggage_value = Column(Integer)
+    leg_1_segment_0_baggage_unit = Column(String)
+
+    leg_1_segment_1_flight_number = Column(String)
+    leg_1_segment_1_airline = Column(String)
+    leg_1_segment_1_from_city_code = Column(String)
+    leg_1_segment_1_from_airport_code = Column(String)
+    leg_1_segment_1_arrival_datetime = Column(DateTime)
+    leg_1_segment_1_to_city_code = Column(String)
+    leg_1_segment_1_to_airport_code = Column(String)
+    leg_1_segment_1_departure_datetime = Column(DateTime)
+    leg_1_segment_1_baggage_value = Column(Integer)
+    leg_1_segment_1_baggage_unit = Column(String)
+
+    leg_1_segment_2_flight_number = Column(String)
+    leg_1_segment_2_airline = Column(String)
+    leg_1_segment_2_from_city_code = Column(String)
+    leg_1_segment_2_from_airport_code = Column(String)
+    leg_1_segment_2_arrival_datetime = Column(DateTime)
+    leg_1_segment_2_to_city_code = Column(String)
+    leg_1_segment_2_to_airport_code = Column(String)
+    leg_1_segment_2_departure_datetime = Column(DateTime)
+    leg_1_segment_2_baggage_value = Column(Integer)
+    leg_1_segment_2_baggage_unit = Column(String)
